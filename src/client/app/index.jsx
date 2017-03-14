@@ -53,12 +53,17 @@ class SearchArea extends React.Component {
       inputValue: evt.target.value
     });
   }
-  onClick() {
-    this.requestWikipedia();
-  }
   onSubmit(e) {
     e.preventDefault();
-    this.requestWikipedia();
+    if (this.inputValid() === true) {
+      this.requestWikipedia();
+    }
+  }
+  inputValid() {
+    if (this.state.inputValue !== '') {
+      return true;
+    }
+    return false;
   }
   render() {
     return <div className="search-area">
@@ -66,7 +71,7 @@ class SearchArea extends React.Component {
             <div>
               <form onSubmit={(e) => {this.onSubmit(e)}} >
                 <input type="text" name="search" value={this.state.inputValue}  onChange={(e) => {this.updateInputValue(e)}}/>
-                <button type="submit" onClick={(e) => {this.onClick(e)}}>search</button>
+                <button type="submit">search</button>
               </form>
             </div>
             {this.state.searchResult !== null ? <ResultArea searchResult={this.state.searchResult}/> : null}

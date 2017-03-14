@@ -30,9 +30,8 @@ form {
   margin: 20px;
 }
 .search-area input {
-  border-style: solid;
-  border-color: #ccc;
-  border-radius: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
   margin: 5px;
   padding: 6px 12px;
   color: #000;

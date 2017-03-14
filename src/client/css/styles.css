@@ -20,7 +20,10 @@ h1 {
 #author {
   margin-bottom: 20px;
 }
-form {
+.no-results {
+  margin-bottom: 10px;
+}
+.display-results {
   margin-bottom: 0;
 }
 .search-area {

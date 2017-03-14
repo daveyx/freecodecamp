@@ -81,11 +81,17 @@ class SearchArea extends React.Component {
     }
     return 'invalid-info display-block';
   }
+  formClassName() {
+    if (this.state.searchResult === null) {
+      return 'no-results';
+    }
+    return 'display-results';
+  }
   render() {
     return <div className="search-area">
             <div>Search for an article:</div>
             <div>
-              <form onSubmit={(e) => {this.onSubmit(e)}} >
+              <form onSubmit={(e) => {this.onSubmit(e)}} className={this.formClassName()}>
                 <input type="text" name="search" value={this.state.inputValue}  onChange={(e) => {this.updateInputValue(e)}}/>
                 <button type="submit">search</button>
               </form>

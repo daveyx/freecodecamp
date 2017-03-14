@@ -42,9 +42,32 @@ h1 {
     border: 2px solid #ccc;
     border-radius: 4px;
 }
-.random-link, #author a {
+.random-link, #author a, .result-item-link {
   color: #000;
   text-decoration: none;
+}
+ul {
+  padding-left: 0;
+}
+ .result-area > div:first-of-type {
+   margin-top: 15px;
+   font-weight: bold;
+ }
+.result-item {
+  background-color: #D8D8D8;
+  margin-bottom: 5px;
+  padding: 10px;
+  border-radius: 5px;
+}
+.result-item-link {
+  list-style: none;
+}
+.result-item-header {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+.result-item-body {
+  font-size: small;
 }
 footer {
   margin-top: 50px;

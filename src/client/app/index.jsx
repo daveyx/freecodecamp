@@ -23,7 +23,8 @@ class SearchArea extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      inputValue: ''
+      inputValue: '',
+      searchResult: null
     };
   }
   onClick() {
@@ -39,13 +40,10 @@ class SearchArea extends React.Component {
 
     // console.log("reqUri: " + reqUri);
 
-    axios.get(reqUri)
-      .then(response => {
-        console.log(response.data);
-      // this.setState({
-      //   city: response.data.city,
-      //   country: response.data.country
-      // });
+    axios.get(reqUri).then(response => {
+      this.setState({
+        searchResult: response.data.query.pages
+      });
     }).catch(function (error) {
       console.log("error axios-get1: " + error);
     });
@@ -62,7 +60,7 @@ class SearchArea extends React.Component {
               <input type="text" name="search" value={this.state.inputValue}  onChange={(e) => {this.updateInputValue(e)}}/>
               <button onClick={(e) => {this.onClick(e)}}>search</button>
             </div>
-            <ResultArea />
+            {this.state.searchResult !== null ? <ResultArea searchResult={this.state.searchResult}/> : null}
            </div>;
   }
 }
@@ -75,8 +73,15 @@ class ResultArea extends React.Component {
     super(props);
   }
   render() {
+    let obj = this.props.searchResult;
     return <div className="result-area">
             <div>Search Results:</div>
+              <ul>
+                {Object.keys(obj).map(function(key) {
+                    console.log("---> " + key);
+                    return <ResultItem key={key} dataObj={obj[key]}></ResultItem>;
+                })}
+              </ul>
            </div>;
   }
 }
@@ -85,7 +90,19 @@ class ResultArea extends React.Component {
   ResultItem Component
 */
 class ResultItem extends React.Component {
+  constructor(props) {
+    super(props);
+  }
   render() {
+    let uri = "https://en.wikipedia.org/?curid=" + this.props.dataObj.pageid;
+    return  <div className="result-item">
+              <a className="result-item-link" href={uri} target="_blank" title={this.props.dataObj.title}>
+                <li>
+                  <div className="result-item-header">{this.props.dataObj.title}</div>
+                  <div className="result-item-body">{this.props.dataObj.extract}</div>
+                </li>
+              </a>
+            </div>
   }
 }
 

@@ -24,6 +24,7 @@ class SearchArea extends React.Component {
     super(props);
     this.state = {
       inputValue: '',
+      inputValid: true,
       searchResult: null
     };
   }
@@ -55,15 +56,30 @@ class SearchArea extends React.Component {
   }
   onSubmit(e) {
     e.preventDefault();
+    if (this.state.inputValue !== '') {
+      this.setState({
+        inputValid: true
+      });
+    } else {
+      this.setState({
+        inputValid: false
+      });
+    }
     if (this.inputValid() === true) {
       this.requestWikipedia();
     }
   }
   inputValid() {
-    if (this.state.inputValue !== '') {
+    if (this.state.inputValue !== '' || this.state.inputValid === true) {
       return true;
     }
     return false;
+  }
+  inputValidClassName() {
+    if (this.inputValid() === true) {
+      return 'invalid-info display-none';
+    }
+    return 'invalid-info display-block';
   }
   render() {
     return <div className="search-area">
@@ -73,6 +89,7 @@ class SearchArea extends React.Component {
                 <input type="text" name="search" value={this.state.inputValue}  onChange={(e) => {this.updateInputValue(e)}}/>
                 <button type="submit">search</button>
               </form>
+              <div className={this.inputValidClassName()} ref="invalidInfo">Please provide a search value!</div>
             </div>
             {this.state.searchResult !== null ? <ResultArea searchResult={this.state.searchResult}/> : null}
            </div>;

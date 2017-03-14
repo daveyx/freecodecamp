@@ -20,6 +20,9 @@ h1 {
 #author {
   margin-bottom: 20px;
 }
+form {
+  margin-bottom: 0;
+}
 .search-area {
   border: solid 1px #ccc;
   border-radius: 5px;
@@ -70,6 +73,16 @@ ul {
 }
 .result-item-body {
   font-size: small;
+}
+.invalid-info {
+  color: red;
+  font-size: small;
+}
+.display-none {
+  display: none;
+}
+.display-block {
+  display: block;
 }
 footer {
   margin-top: 50px;

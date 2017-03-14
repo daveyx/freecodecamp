@@ -27,7 +27,7 @@ class SearchArea extends React.Component {
       searchResult: null
     };
   }
-  onClick() {
+  requestWikipedia() {
     /*
       https://github.com/mzabriskie/axios/issues/191
       i had to add &origin=* in order to avoid:
@@ -53,12 +53,21 @@ class SearchArea extends React.Component {
       inputValue: evt.target.value
     });
   }
+  onClick() {
+    this.requestWikipedia();
+  }
+  onSubmit(e) {
+    e.preventDefault();
+    this.requestWikipedia();
+  }
   render() {
     return <div className="search-area">
             <div>Search for an article:</div>
             <div>
-              <input type="text" name="search" value={this.state.inputValue}  onChange={(e) => {this.updateInputValue(e)}}/>
-              <button onClick={(e) => {this.onClick(e)}}>search</button>
+              <form onSubmit={(e) => {this.onSubmit(e)}} >
+                <input type="text" name="search" value={this.state.inputValue}  onChange={(e) => {this.updateInputValue(e)}}/>
+                <button type="submit" onClick={(e) => {this.onClick(e)}}>search</button>
+              </form>
             </div>
             {this.state.searchResult !== null ? <ResultArea searchResult={this.state.searchResult}/> : null}
            </div>;
@@ -78,7 +87,6 @@ class ResultArea extends React.Component {
             <div>Search Results:</div>
               <ul>
                 {Object.keys(obj).map(function(key) {
-                    console.log("---> " + key);
                     return <ResultItem key={key} dataObj={obj[key]}></ResultItem>;
                 })}
               </ul>

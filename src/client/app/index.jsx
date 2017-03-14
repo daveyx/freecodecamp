@@ -11,7 +11,7 @@ class RandomLink extends React.Component {
   render() {
     return <div>
             <a className="random-link" href="https://en.wikipedia.org/wiki/Special:Random" target="_blank">Click here for a random article</a>
-            </div>;
+          </div>;
   }
 }
 
@@ -51,7 +51,7 @@ class SearchArea extends React.Component {
 class ResultArea extends React.Component {
   render() {
     return <div className="result-area">
-            <div>fitzefatze</div>
+            <div>Search Results:</div>
            </div>;
   }
 }

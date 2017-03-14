@@ -42,7 +42,13 @@ h1 {
     border: 2px solid #ccc;
     border-radius: 4px;
 }
-a {
+.random-link, #author a {
   color: #000;
   text-decoration: none;
+}
+footer {
+  margin-top: 50px;
+}
+footer div {
+  font-size: small;
 }

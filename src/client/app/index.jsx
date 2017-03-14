@@ -1,5 +1,6 @@
 import React from 'react';
 import {render} from 'react-dom';
+import axios from 'axios';
 
 /*
   RandomLink Component
@@ -26,7 +27,28 @@ class SearchArea extends React.Component {
     };
   }
   onClick() {
-    console.log("inputvalue: " + this.state.inputValue);
+    /*
+      https://github.com/mzabriskie/axios/issues/191
+      i had to add &origin=* in order to avoid:
+      No 'Access-Control-Allow-Origin' header is present on the requested resource. Origin 'null' is therefore not allowed access.
+    */
+    let reqUri = "https://en.wikipedia.org/w/api.php?format=json"
+      + "&origin=*&action=query&generator=search&gsrnamespace=0&gsrlimit=10"
+      + "&prop=pageimages|extracts&pilimit=max&exintro&explaintext&exsentences=1&exlimit=max&gsrsearch="
+      + this.state.inputValue;
+
+    // console.log("reqUri: " + reqUri);
+
+    axios.get(reqUri)
+      .then(response => {
+        console.log(response.data);
+      // this.setState({
+      //   city: response.data.city,
+      //   country: response.data.country
+      // });
+    }).catch(function (error) {
+      console.log("error axios-get1: " + error);
+    });
   }
   updateInputValue(evt) {
     this.setState({
@@ -49,10 +71,21 @@ class SearchArea extends React.Component {
   ResultArea Component
 */
 class ResultArea extends React.Component {
+  constructor(props) {
+    super(props);
+  }
   render() {
     return <div className="result-area">
             <div>Search Results:</div>
            </div>;
+  }
+}
+
+/*
+  ResultItem Component
+*/
+class ResultItem extends React.Component {
+  render() {
   }
 }
 

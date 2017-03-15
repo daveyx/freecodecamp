@@ -7,16 +7,16 @@
     (________/  (___/    \___)     \__/      \_______) |___/      |___/\___|
     ------------------------------------------------------------------------
 
-#my wikipedia viewer app with react#
+# my wikipedia viewer app with react
 https://www.freecodecamp.com/challenges/build-a-wikipedia-viewer
 
-###live demo coming soon
+### live demo
 http://daveyx.ga/wikipedia-viewer
 
-###view at codepen
+### view at codepen
 http://codepen.io/daveyx/full/jBwJmR/
 
-###install
+### install
 1. git clone https://github.com/daveyx/fcc-wikipedia-viewer.git
 2. cd fcc-wikipedia-viewer
 3. npm install

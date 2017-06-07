@@ -27,5 +27,8 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/daveyx/fcc-twitchtv"
+  },
+  "devDependencies": {
+    "html-webpack-plugin": "^2.28.0"
   }
 }

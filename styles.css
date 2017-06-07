@@ -1,0 +1,17 @@
+h1, h2, p {
+    text-align: center;
+}
+
+ul {
+  text-align: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  padding-top: 10px;
+}
+.fcc-logo {
+  background-color: darkgreen;
+}

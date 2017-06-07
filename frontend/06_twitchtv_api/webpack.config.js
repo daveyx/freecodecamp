@@ -5,7 +5,7 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin');
 module.exports = {
   devServer: {
     inline: true,
-    contentBase: './src',
+    contentBase: '../../public/06_twitchtv_api',
     port: 3000
   },
   devtool: 'cheap-module-eval-source-map',

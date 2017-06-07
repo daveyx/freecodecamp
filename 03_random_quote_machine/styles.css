@@ -1,0 +1,48 @@
+body {
+  background-color: lightblue;
+  background-image: url(http://geist-leben-welt.de/wp-content/uploads/2011/04/Weltall-4a.jpg);
+}
+
+.margin-top-10 {
+  margin-top: 10px;
+}
+
+h1 {
+  width: 500px;
+  margin: 9% auto auto auto;
+  padding: 7px;
+}
+
+.white-box {
+  background-color: white;
+  border: 1px solid #808080;
+  border-radius: 20px;
+  opacity: 0.8;
+}
+
+.centered-box {
+  margin: 20px auto auto auto;
+  min-height: 150px;
+  width: 450px;
+  padding: 40px 50px;
+}
+
+.quote-box {
+ font-size: 25px;
+}
+
+.author-box {
+  margin-bottom: 15px;
+}
+
+button {
+  width: 100%;
+}
+
+.text-box {
+  min-height: 100px;
+}
+
+footer {
+  margin-bottom: 20px;
+}

@@ -1,7 +1,7 @@
 var currentQuote;
 
 function printQuote(quoteJson) {
-  var json = JSON.parse(quoteJson);
+  var json = quoteJson;
   $(".quote-box").animate({
           opacity: 0
         }, 500,
@@ -32,9 +32,7 @@ function getQuote() {
     },
     url: 'https://andruxnet-random-famous-quotes.p.mashape.com/cat=',
     success: function(response) {
-      console.log("---------------response------------------")
-      console.log(response)
-      currentQuote = JSON.parse(response);
+      currentQuote = response;
       printQuote(response);
       $('#tweet-button').attr('href', 'https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=' + encodeURIComponent('"' + currentQuote.quote + '" ' + currentQuote.author));
      }});

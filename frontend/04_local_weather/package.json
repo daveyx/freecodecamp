@@ -1,9 +1,11 @@
 {
   "name": "loacal_weather",
   "version": "1.0.0",
-  "description": "",
+  "description": "Free Codecamp - Local weather",
   "main": "index.js",
   "scripts": {
+    "dev": "webpack",
+    "start": "webpack-dev-server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",

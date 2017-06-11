@@ -9,5 +9,8 @@
 
 # my portfolio page
 
-### live version
+### general live version
 https://daveyx.ga
+
+### live version at github
+https://daveyx.github.io/freecodecamp/02_portfolio_page/

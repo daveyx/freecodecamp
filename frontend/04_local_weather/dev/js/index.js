@@ -16,7 +16,7 @@ class City extends React.Component {
   }
 
   componentDidMount() {
-    axios.get("http://ipinfo.io")
+    axios.get("https://ipinfo.io")
       .then(response => {
       this.setState({
         city: response.data.city,

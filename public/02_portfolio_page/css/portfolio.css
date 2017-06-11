@@ -1,0 +1,395 @@
+@import url('https://fonts.googleapis.com/css?family=Londrina+Shadow');
+
+@media (max-width: 767px) {
+  .middle-fluid-content {
+    width: 100%;
+  }
+
+  .intro-image {
+    width: 40%;
+  }
+
+  .intro-text {
+    width: 60%;
+    padding-top: 15px;
+    padding-left: 15px;
+  }
+
+  .intro-text .binary {
+    font-size: 7px;
+  }
+
+  h1 {
+    margin-bottom: 0;
+    font-size: 42px;
+  }
+
+  .fullstack-teaser {
+    font-size: 18vw;
+    letter-spacing: 10px;
+  }
+
+  .nomad-teaser {
+    font-size: 95px;
+    line-height: normal;
+  }
+  .bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4 {
+    position: relative;
+    opacity: 0.8;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 20px;
+  }
+  .bgimg-1 {
+      background-image: url(https://www.daveyx.ga/images/img_parallax_mobile.jpg);
+      min-height: 300px;
+  }
+  .bgimg-2 {
+    background-image: url(https://www.daveyx.ga/images/img_parallax2_mobile.jpg);
+    min-height: 300px;
+    margin-top: 10px;
+  }
+  .bgimg-3 {
+    background-image: url(https://www.daveyx.ga/images/img_parallax3_mobile.jpg);
+    min-height: 300px;
+  }
+  .bgimg-4 {
+    background-image: url(https://www.daveyx.ga/images/img_parallax4_mobile.jpg);
+    min-height: 300px;
+  }
+  .form-element {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .control-label {
+    padding-left: 32px;
+  }
+}
+
+@media only screen and (min-width : 480px) {
+  .intro-image img {
+    max-width: 80%;
+  }
+
+  .intro-text {
+    width: 60%;
+    padding-left: 20px;
+    padding-top: 0;
+  }
+
+  h1 {
+    margin-bottom: 0;
+    font-size: 72px;
+  }
+}
+
+/* h1-small breaks to one line */
+@media only screen and (min-width : 685px) {
+  .intro-text {
+    padding-top: 40px;
+  }
+}
+
+@media (min-width: 768px) {
+  .middle-fluid-content {
+    width: 750px;
+  }
+
+  .intro-image {
+    width: 40%;
+  }
+
+  .intro-text {
+    width: 60%;
+    padding-top: 10px;
+    padding-left: 20px;
+  }
+
+  h1 {
+    font-size: 92px;
+  }
+
+  .fullstack-teaser {
+    font-size: 12vw;
+    letter-spacing: 25px;
+  }
+
+  .nomad-teaser {
+    font-size: 140px;
+    letter-spacing: 15px;
+  }
+  .bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4 {
+  	position: relative;
+  	opacity: 0.8;
+  	background-attachment: fixed;
+  	background-position: center;
+  	background-repeat: no-repeat;
+  	background-size: cover;
+  	margin-bottom: 20px;
+  }
+  .bgimg-1 {
+      background-image: url(https://www.daveyx.ga/images/img_parallax.jpg);
+      min-height: 300px;
+  }
+  .bgimg-2 {
+  	background-image: url(https://www.daveyx.ga/images/img_parallax2.jpg);
+  	min-height: 300px;
+    margin-top: 10px;
+  }
+  .bgimg-3 {
+  	background-image: url(https://www.daveyx.ga/images/img_parallax3.jpg);
+  	min-height: 300px;
+  }
+  .bgimg-4 {
+  	background-image: url(https://www.daveyx.ga/images/img_parallax4.jpg);
+  	min-height: 300px;
+  }
+  #show-more-wrap, #show-more-wrap2, #show-more-wrap3 {
+    display: block;
+  }
+  .form-element {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
+
+@media (min-width: 992px) {
+  .intro-text {
+    padding-top: 50px;
+    padding-left: 60px;
+  }
+
+  .middle-fluid-content {
+    width: 910px;
+  }
+
+  .linkedin-logo {
+      padding-top: 15px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .intro-text {
+    padding-top: 70px;
+    padding-left: 80px;
+  }
+ .middle-fluid-content {
+    width: 1110px;
+  }
+}
+
+body {
+  min-height: 2000px;
+  padding-top: 70px;
+  width: 100%;
+  margin: 0%;
+}
+
+h3 {
+  font-size: 35px;
+}
+
+.navbar-inverse {
+  background-color: #fff;
+  border-color: #e7e7e7;
+}
+
+.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover {
+    color: #222;
+    background-color: #46b8da;
+    opacity: 0.8;
+}
+
+.nav>li {
+    min-width: 120px;
+    text-align: center;
+}
+
+.navbar-default .navbar-toggle {
+    border-color: #ddd;
+}
+
+.navbar-inverse .navbar-toggle .icon-bar {
+    background-color: #888;
+}
+
+.navbar-inverse .navbar-toggle:focus, .navbar-inverse .navbar-toggle:hover {
+    background-color: #fff;
+}
+
+.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+  border-color: #888;
+}
+
+.navbar-right {
+  margin-right: 0;
+}
+
+.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
+  color: #9d9d9d;
+}
+
+.blue {
+  background-color: #46b8da;
+}
+
+.middle-fluid-content {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h1 {
+  font-family: 'Londrina Shadow', cursive;
+  letter-spacing: 8px;
+  text-shadow: 2px 2px white;
+}
+
+.intro-text {
+  float: left;
+}
+
+.intro-text h1 small {
+  color: white;
+  display: block;
+  letter-spacing: normal;
+  text-shadow: none;
+}
+
+.intro-image {
+  float: left;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.intro-image img {
+  -webkit-box-shadow: 10px 10px 50px grey;
+  -moz-box-shadow: 10px 10px 50px grey;
+  box-shadow: 10px 10px 50px grey;
+  float: right;
+}
+
+.binary {
+  font-family: Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace;
+  width: 100%;
+  padding-top: 5px;
+}
+
+.fullstack-teaser {
+  font-family: 'Londrina Shadow', cursive;
+}
+
+.nomad-teaser {
+  font-family: 'Londrina Shadow', cursive;
+}
+
+#about p {
+  margin-bottom: 0;
+}
+
+.caption {
+    position: absolute;
+    left: 0;
+    top: 45%;
+    width: 100%;
+    text-align: center;
+    color: #000;
+    background-color: #46b8da;
+}
+
+.border {
+    color: #fff;
+    margin-bottom: 20px;
+    font-size: 40px;
+    font-weight: bolder;
+    letter-spacing: 5px;
+}
+
+.portfolioitem-item {
+  min-height: 150px;
+  border: solid 1px #ddd;
+  border-radius: 5px;
+  margin-bottom: 25px;
+}
+
+.portfolioitem-header {
+  background-color: #46b8da;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.portfolioitem-image {
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+}
+
+.portfolioitem-image img {
+  max-height: 150px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.portfolioitem-text {
+  margin-top: 5px;
+  text-align: center;
+}
+
+.btn:focus, .btn:focus:active {
+    outline: none;
+    background-color: #337ab7;
+    border-color: #2e6da4;
+}
+
+.project {
+  border: solid 1px #ddd;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.project-image img {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.project-text p {
+  margin-top: 20px;
+}
+
+.social .contact-item {
+  margin-bottom: 20px;
+  max-height: 150px;
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+}
+
+.messengers .contact-item .messenger-image img {
+  max-height: 150px;
+  margin-bottom: 10px;
+}
+
+.messengers .contact-item {
+  margin-bottom: 20px;
+}
+
+.messengers .contact-item p {
+  width: 100%;
+}
+
+.panel {
+  -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+  margin-top: 10px;
+  padding-bottom: 20px;
+}
+
+.panel-heading {
+  background-color: #46b8da;
+  border: 1px solid #46b8da;
+}
+
+#myform input, #myform textarea {
+  margin-bottom: 10px;
+}

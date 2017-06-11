@@ -1,0 +1,3 @@
+RewriteCond %{REQUEST_URI} !^/images/favicon/favicon\.ico$ [NC]
+RewriteCond %{HTTP_HOST} (.+)
+RewriteRule ^(.*)favicon\.(ico|gif|png|jpe?g)$ http://%1/images/favicon/favicon.ico [R=301,L,NC]

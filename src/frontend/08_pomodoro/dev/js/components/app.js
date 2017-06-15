@@ -3,11 +3,11 @@
 import React, {Component} from 'react';
 import {Grid, Row, Col} from 'react-bootstrap';
 import '../../css/styles.css';
-import PomodoroContainer from '../containers/pomodoroContainer'
+import PomodoroContainer from '../containers/pomodoroContainer';
 
 export default class App extends Component {
   constructor(props) {
-    super();
+    super(props);
   }
 
   render() {

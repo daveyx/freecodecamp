@@ -5,17 +5,17 @@ import {Row, Col} from 'react-bootstrap';
 
 export default class PlayerSelection extends Component {
   constructor(props) {
-    super();
+    super(props);
     this.selectPlayerX = this.selectPlayerX.bind(this);
     this.selectPlayerO = this.selectPlayerO.bind(this);
   }
 
   selectPlayerX() {
-    this.props.clickHandler("X");
+    this.props.clickHandler('X');
   }
 
   selectPlayerO() {
-    this.props.clickHandler("O");
+    this.props.clickHandler('O');
   }
 
   render() {

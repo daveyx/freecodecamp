@@ -6,7 +6,7 @@ import Field from './field';
 
 export default class PlayGround extends Component {
   constructor(props) {
-    super();
+    super(props);
   }
 
   render() {

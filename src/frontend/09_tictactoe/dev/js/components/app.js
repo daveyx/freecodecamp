@@ -7,7 +7,7 @@ import TicTacToe from './tictactoe';
 
 export default class App extends Component {
   constructor(props) {
-    super();
+    super(props);
   }
 
   render() {

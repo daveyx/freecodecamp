@@ -1,30 +1,30 @@
 'use strict';
 
 import React, {Component} from 'react';
-import {Row, Col, Modal, Button} from 'react-bootstrap';
+import {Modal, Button} from 'react-bootstrap';
 import PlayGround from './playGround';
 import PlayerSelection from './playerSelection';
 
 const initialGameState = {
-  sqr1: "",
-  sqr2: "",
-  sqr3: "",
-  sqr4: "",
-  sqr5: "",
-  sqr6: "",
-  sqr7: "",
-  sqr8: "",
-  sqr9: ""
+  sqr1: '',
+  sqr2: '',
+  sqr3: '',
+  sqr4: '',
+  sqr5: '',
+  sqr6: '',
+  sqr7: '',
+  sqr8: '',
+  sqr9: ''
 };
 
-let winnerMessage = "";
+let winnerMessage = '';
 
 export default class TicTacToe extends Component {
   constructor(props) {
-    super();
+    super(props);
     this.state = {
-      userPlayer: "",
-      computerPlayer: "",
+      userPlayer: '',
+      computerPlayer: '',
       gameState: initialGameState,
       showModal: false,
       gameFinished: false
@@ -37,32 +37,32 @@ export default class TicTacToe extends Component {
   }
 
   componentWillUpdate(nextProps, nextState) {
-    if (this.state.userPlayer !== "" && this.state.computerPlayer !== "" && ! this.state.gameFinished) {
+    if (this.state.userPlayer !== '' && this.state.computerPlayer !== '' && ! this.state.gameFinished) {
       const computerWinner = hasWon(nextState.gameState, nextState.computerPlayer);
       if (computerWinner === nextState.computerPlayer) {
-        console.log("--->computer won!", nextState.computerPlayer);
+        console.log('--->computer won!', nextState.computerPlayer);
         this.finishGame(nextState.computerPlayer);
-      } else if (computerWinner === "XO") {
-        console.log("--->DRAW!");
-        this.finishGame("XO");
+      } else if (computerWinner === 'XO') {
+        console.log('--->DRAW!');
+        this.finishGame('XO');
       }
 
       const userWinner = hasWon(nextState.gameState, nextState.userPlayer);
       if (userWinner === nextState.userPlayer) {
-        console.log("--->user won!", nextState.userPlayer);
+        console.log('--->user won!', nextState.userPlayer);
         this.finishGame(nextState.userPlayer);
       }
     }
   }
 
   finishGame(winner) {
-    if (winner === "XO") {
-      winnerMessage = "Draw!";
+    if (winner === 'XO') {
+      winnerMessage = 'Draw!';
     } else {
       if (winner === this.state.userPlayer) {
-        winnerMessage = "You won!";
+        winnerMessage = 'You won!';
       } else {
-        winnerMessage = "You lost!";
+        winnerMessage = 'You lost!';
       }
     }
     this.setState({
@@ -72,7 +72,7 @@ export default class TicTacToe extends Component {
   }
 
   selectPlayer(val) {
-    const computerPlayer = val === "X" ? "O" : "X";
+    const computerPlayer = val === 'X' ? 'O' : 'X';
     this.setState({
       userPlayer: val,
       computerPlayer: computerPlayer
@@ -96,12 +96,12 @@ export default class TicTacToe extends Component {
   closeModal() {
     this.setState({
       gameFinished: false,
-      userPlayer: "",
-      computerPlayer: "",
+      userPlayer: '',
+      computerPlayer: '',
       gameState: initialGameState,
       showModal: false
     });
-    winnerMessage = "";
+    winnerMessage = '';
   }
 
   render() {
@@ -130,8 +130,8 @@ export default class TicTacToe extends Component {
 function getFieldToSet(gameState, computerPlayer, userPlayer) {
   // win?
   for (let i = 1; i <= 9; i++) {
-    const field = "sqr" + i;
-    if (gameState[field] === "") {
+    const field = 'sqr' + i;
+    if (gameState[field] === '') {
       const winGameSate = Object.assign({}, gameState);
       winGameSate[field] = computerPlayer;
       if (hasWon(winGameSate, computerPlayer) === computerPlayer) {
@@ -142,8 +142,8 @@ function getFieldToSet(gameState, computerPlayer, userPlayer) {
 
   // block?
   for (let i = 1; i <= 9; i++) {
-    const field = "sqr" + i;
-    if (gameState[field] === "") {
+    const field = 'sqr' + i;
+    if (gameState[field] === '') {
       const winGameSate = Object.assign({}, gameState);
       winGameSate[field] = userPlayer;
       if (hasWon(winGameSate, userPlayer) === userPlayer) {
@@ -154,8 +154,8 @@ function getFieldToSet(gameState, computerPlayer, userPlayer) {
 
   // do next possible
   for (let i = 1; i <= 9; i++) {
-    const field = "sqr" + i;
-    if (gameState[field] === "") {
+    const field = 'sqr' + i;
+    if (gameState[field] === '') {
       return field;
     }
   }
@@ -180,10 +180,10 @@ function hasWon(gameState, val) {
     return val;
   }
   const isDraw = Object.entries(gameState).reduce((prev, x) => {
-    return prev && x[1] !== "";
+    return prev && x[1] !== '';
   }, true);
   if (isDraw) {
-    return "XO";
+    return 'XO';
   }
   return null;
 }

@@ -11,6 +11,10 @@ module.exports = {
   },
   devtool: 'cheap-module-eval-source-map',
   entry: './dev/js/index.js',
+  output: {
+    path: path.resolve(__dirname, 'src'),
+    filename: 'js/bundle.min.js'
+  },
   module: {
     loaders: [
       {

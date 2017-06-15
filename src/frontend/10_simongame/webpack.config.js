@@ -3,14 +3,21 @@ var webpack = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 
+var BUILD_DIR = path.resolve(__dirname, '../../../public/frontend/10_simongame');
+
 module.exports = {
   devServer: {
     inline: true,
-    contentBase: './src',
+    contentBase: BUILD_DIR,
     port: 3000
   },
   devtool: 'source-map',
   entry: './dev/js/index.js',
+  output: {
+    path: BUILD_DIR,
+    filename: 'js/bundle.min.js',
+    publicPath: '/'
+  },
   module: {
     loaders: [
       {
@@ -22,11 +29,6 @@ module.exports = {
         loader: ExtractTextPlugin.extract("css-loader")
       }
     ]
-  },
-  output: {
-    path: path.resolve(__dirname, 'src'),
-    filename: 'js/bundle.min.js',
-    publicPath: '/'
   },
   plugins: [
     new webpack.optimize.OccurrenceOrderPlugin(),

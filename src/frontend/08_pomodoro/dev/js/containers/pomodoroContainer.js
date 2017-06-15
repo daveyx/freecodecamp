@@ -14,7 +14,7 @@ import {
 
 class PomodoroContainer extends React.Component {
   constructor(props) {
-    super();
+    super(props);
     this.runTimer = this.runTimer.bind(this);
     this.stopTimer = this.stopTimer.bind(this);
     this.state = {
@@ -31,7 +31,7 @@ class PomodoroContainer extends React.Component {
     this.stopTimer();
   }
 
-  componentWillUpdate(nextProps, nextState) {
+  componentWillUpdate(nextProps, nextState) { // eslint-disable-line no-unused-vars
     if (( ! this.props.isPaused && nextProps.isPaused) ||
       ( ! nextProps.isSessionRunning && ! nextProps.isBreakRunning)) {
       this.stopTimer();
@@ -85,7 +85,7 @@ function mapStatesToProps(state) {
     isBreakRunning: state.pomodoroState.isBreakRunning,
     isPaused: state.pomodoroState.isPaused,
     userInfo: state.pomodoroState.userInfo
-  }
+  };
 }
 
 function matchDispatchToProps(dispatch) {
@@ -95,7 +95,7 @@ function matchDispatchToProps(dispatch) {
     pausePomodoro: pausePomodoroAction,
     resumePomodoro: resumePomodoroAction,
     resetPomodoro: resetPomodoroAction
-  }, dispatch)
+  }, dispatch);
 }
 
 export default connect(mapStatesToProps, matchDispatchToProps)(PomodoroContainer);

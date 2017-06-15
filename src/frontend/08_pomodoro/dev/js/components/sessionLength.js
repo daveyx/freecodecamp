@@ -2,11 +2,10 @@
 
 import React, {Component} from 'react';
 import {Row, Col} from 'react-bootstrap';
-import Pomodoro from './pomodoro'
 
 export default class SessionLength extends Component {
   constructor(props) {
-    super();
+    super(props);
   }
 
   render() {

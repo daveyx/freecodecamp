@@ -24,14 +24,14 @@ class SessionLengthContainer extends React.Component {
 function mapStatesToProps(state) {
   return {
     sessionLength: state.pomodoroState.sessionLength
-  }
+  };
 }
 
 function matchDispatchToProps(dispatch) {
   return bindActionCreators({
     incrementSession: incrementSessionAction,
     decrementSession: decrementSessionAction
-  }, dispatch)
+  }, dispatch);
 }
 
 export default connect(mapStatesToProps, matchDispatchToProps)(SessionLengthContainer);

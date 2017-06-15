@@ -1,7 +1,7 @@
 'use strict';
 
 import React from 'react';
-import ReactDOM from "react-dom";
+import ReactDOM from 'react-dom';
 import App from './components/app';
 import {createStore} from 'redux';
 import {Provider} from 'react-redux';

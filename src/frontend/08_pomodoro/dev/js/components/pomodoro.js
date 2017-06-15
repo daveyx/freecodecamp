@@ -7,32 +7,32 @@ import SessionLengthContainer from '../containers/sessionLengthContainer';
 
 export default class Pomodoro extends Component {
   constructor(props) {
-    super();
+    super(props);
   }
 
   getButton1Text() {
     if ( ! this.props.isSessionRunning && ! this.props.isBreakRunning) {
-      return "Start";
+      return 'Start';
     } else {
-      return "Pause";
+      return 'Pause';
     }
   }
 
   getButton1Config() {
     if ( ! this.props.isSessionRunning && ! this.props.isBreakRunning) {
       return {
-        text: "Start",
+        text: 'Start',
         handler: this.props.startClickHandler
       };
     } else {
       if (this.props.isPaused) {
         return {
-          text: "Resume",
+          text: 'Resume',
           handler: this.props.resumeClickHandler
         };
       } else {
         return {
-          text: "Pause",
+          text: 'Pause',
           handler: this.props.pauseClickHandler
         };
       }
@@ -41,7 +41,7 @@ export default class Pomodoro extends Component {
 
   getButton2Text() {
     if (this.props.isSessionRunning || this.props.isBreakRunning) {
-      return "Reset";
+      return 'Reset';
     }
   }
 

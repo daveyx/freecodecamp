@@ -3,7 +3,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
-import BreakLength from '../components/breakLength'
+import BreakLength from '../components/breakLength';
 import {
   incrementBreakAction,
   decrementBreakAction
@@ -24,14 +24,14 @@ class BreakLengthContainer extends React.Component {
 function mapStatesToProps(state) {
   return {
     breakLength: state.pomodoroState.breakLength
-  }
+  };
 }
 
 function matchDispatchToProps(dispatch) {
   return bindActionCreators({
     incrementBreak: incrementBreakAction,
     decrementBreak: decrementBreakAction
-  }, dispatch)
+  }, dispatch);
 }
 
 export default connect(mapStatesToProps, matchDispatchToProps)(BreakLengthContainer);

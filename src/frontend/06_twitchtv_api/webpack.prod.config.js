@@ -3,12 +3,9 @@ var webpack = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 
+var BUILD_DIR = path.resolve(__dirname, '../../../public/frontend/06_twitchtv_api');
+
 module.exports = {
-  devServer: {
-    inline: true,
-    contentBase: '../../public/06_twitchtv_api',
-    port: 3000
-  },
   entry: './dev/js/index.js',
   module: {
     loaders: [
@@ -23,9 +20,9 @@ module.exports = {
     ]
   },
   output: {
-    path: path.resolve(__dirname, '../../public/06_twitchtv_api'),
+    path: BUILD_DIR,
     filename: 'js/bundle.[hash].js',
-    publicPath: '/freecodecamp/06_twitchtv_api'
+    publicPath: '/freecodecamp/frontend/06_twitchtv_api'
   },
   plugins: [
     new webpack.optimize.OccurrenceOrderPlugin(),

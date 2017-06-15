@@ -3,10 +3,12 @@ var webpack = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 
+var BUILD_DIR = path.resolve(__dirname, '../../../public/frontend/06_twitchtv_api');
+
 module.exports = {
   devServer: {
     inline: true,
-    contentBase: '../../public/06_twitchtv_api',
+    contentBase: BUILD_DIR,
     port: 3000
   },
   devtool: 'cheap-module-eval-source-map',

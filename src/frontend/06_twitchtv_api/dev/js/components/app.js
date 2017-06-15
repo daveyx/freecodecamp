@@ -186,8 +186,8 @@ export default class App extends React.Component {
               <Col xs={12}>
                 <hr />
                 <footer>
-                  Sourcecode at github.com: <a href="https://github.com/daveyx/fcc-twitchtv" title="Sourcecode" target="_blank">click</a><br />
-                Demo at github.com: <a href="https://daveyx.github.io/fcc-twitchtv/" title="Demo" target="_blank">click</a>
+                  Sourcecode at github.com: <a href="https://github.com/daveyx/freecodecamp/tree/master/src/frontend/06_twitchtv_api" title="Sourcecode" target="_blank">click</a><br />
+                  Demo at github.com: <a href="https://daveyx.github.io/freecodecamp/frontend/06_twitchtv_api/" title="Demo" target="_blank">click</a>
                 </footer>
               </Col>
             </Row>

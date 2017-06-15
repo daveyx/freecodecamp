@@ -29,10 +29,6 @@ module.exports = {
       }
     ]
   },
-  output: {
-    path: path.resolve(__dirname, 'src'),
-    filename: 'js/bundle.min.js'
-  },
   plugins: [
     new webpack.optimize.OccurrenceOrderPlugin(),
     new ExtractTextPlugin("css/styles.css"),

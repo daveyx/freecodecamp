@@ -10,7 +10,7 @@ module.exports = {
   output: {
     path: BUILD_DIR,
     filename: 'js/bundle.[hash].js',
-    publicPath: '/frontend/09_tictactoe'
+    publicPath: '/freecodecamp/frontend/09_tictactoe'
   },
   module: {
     loaders: [

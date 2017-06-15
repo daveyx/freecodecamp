@@ -3,13 +3,15 @@ var webpack = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 
+var BUILD_DIR = path.resolve(__dirname, '../../../public/frontend/10_simongame');
+
 module.exports = {
-  devServer: {
-    inline: true,
-    contentBase: './src',
-    port: 3000
-  },
   entry: './dev/js/index.js',
+  output: {
+    path: BUILD_DIR,
+    filename: 'js/bundle.[hash].js',
+    publicPath: '/freecodecamp/frontend/10_simongame'
+  },
   module: {
     loaders: [
       {
@@ -21,11 +23,6 @@ module.exports = {
         loader: ExtractTextPlugin.extract("css-loader")
       }
     ]
-  },
-  output: {
-    path: path.resolve(__dirname, 'src'),
-    filename: 'js/bundle.[hash].js',
-    publicPath: '/fcc-simon'
   },
   plugins: [
     new webpack.optimize.OccurrenceOrderPlugin(),

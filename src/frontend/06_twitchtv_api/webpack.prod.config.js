@@ -7,6 +7,11 @@ var BUILD_DIR = path.resolve(__dirname, '../../../public/frontend/06_twitchtv_ap
 
 module.exports = {
   entry: './dev/js/index.js',
+  output: {
+    path: BUILD_DIR,
+    filename: 'js/bundle.[hash].js',
+    publicPath: '/freecodecamp/frontend/06_twitchtv_api'
+  },
   module: {
     loaders: [
       {
@@ -18,11 +23,6 @@ module.exports = {
         loader: ExtractTextPlugin.extract("css-loader")
       }
     ]
-  },
-  output: {
-    path: BUILD_DIR,
-    filename: 'js/bundle.[hash].js',
-    publicPath: '/freecodecamp/frontend/06_twitchtv_api'
   },
   plugins: [
     new webpack.optimize.OccurrenceOrderPlugin(),

@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "webpack",
     "start": "webpack-dev-server",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "./node_modules/.bin/eslint 'dev/js'",
+    "lint-fix": "./node_modules/.bin/eslint --fix 'dev/js'"
   },
   "author": "",
   "devDependencies": {

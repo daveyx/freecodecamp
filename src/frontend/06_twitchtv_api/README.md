@@ -11,14 +11,11 @@
 https://www.freecodecamp.com/challenges/use-the-twitchtv-json-api
 
 ### live demo
-https://daveyx.github.io/fcc-twitchtv/
-
-### view at codepen
-TBC
+https://daveyx.github.io/freecodecamp/frontend/06_twitchtv_api/
 
 ### install
-1. git clone https://github.com/daveyx/fcc-twitchtv
-2. cd fcc-twitchtv
+1. git clone https://github.com/daveyx/freecodecamp.git
+2. cd freecodecamp/src/frontend/06_twitchtv_api
 3. npm install
 4. npm start
 5. call http://localhost:3000 in your browser

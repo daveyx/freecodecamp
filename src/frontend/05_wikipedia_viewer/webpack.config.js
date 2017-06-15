@@ -21,8 +21,8 @@ var config = {
     loaders: [
       {
         test: /\.jsx?/,
-        include : path.resolve(__dirname, 'src/client/app'),
-        loader : 'babel-loader'
+        include: path.resolve(__dirname, 'src/client/app'),
+        loader: 'babel-loader'
       }, {
         test: /\.css/,
         loader: ExtractTextPlugin.extract("css-loader")

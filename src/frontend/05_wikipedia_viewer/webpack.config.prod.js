@@ -1,14 +1,16 @@
-var webpack = require('webpack');
 var path = require('path');
+var webpack = require('webpack');
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
 
-var BUILD_DIR = path.resolve(__dirname, 'src/client/public');
-var APP_DIR = path.resolve(__dirname, 'src/client/app');
+var BUILD_DIR = path.resolve(__dirname, '../../../public/frontend/05_wikipedia_viewer');
+
 
 var config = {
-  entry: APP_DIR + '/index.jsx',
+entry: './src/client/app/index.jsx',
   output: {
     path: BUILD_DIR,
-    filename: 'bundle.js'
+    filename: 'js/bundle.[hash].js'
   },
   plugins: [
     new webpack.DefinePlugin({ // <-- key to reducing React's size
@@ -19,15 +21,25 @@ var config = {
     new webpack.optimize.UglifyJsPlugin(), //minify everything
     new webpack.optimize.AggressiveMergingPlugin()//Merge chunks
   ],
-  module : {
-    loaders : [
+  module: {
+    loaders: [
       {
-        test : /\.jsx?/,
-        include : APP_DIR,
-        loader : 'babel-loader'
+        test: /\.jsx?/,
+        include: path.resolve(__dirname, 'src/client/app'),
+        loader: 'babel-loader'
+      }, {
+        test: /\.css/,
+        loader: ExtractTextPlugin.extract("css-loader")
       }
     ]
-  }
+  },
+  plugins: [
+    new webpack.optimize.OccurrenceOrderPlugin(),
+    new ExtractTextPlugin("css/styles.css"),
+    new HtmlWebpackPlugin({
+        template: 'src/client/index.html'
+    })
+  ]
 };
 
 module.exports = config;

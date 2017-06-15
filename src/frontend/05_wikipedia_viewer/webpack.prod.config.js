@@ -33,7 +33,7 @@ entry: './src/client/app/index.jsx',
       }
     }),
     new webpack.optimize.UglifyJsPlugin(), //minify everything
-    new webpack.optimize.AggressiveMergingPlugin()//Merge chunks
+    new webpack.optimize.AggressiveMergingPlugin(), //Merge chunks
     new ExtractTextPlugin("css/styles.css"),
     new HtmlWebpackPlugin({
         template: 'src/client/index.html'

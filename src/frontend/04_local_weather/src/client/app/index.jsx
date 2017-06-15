@@ -16,7 +16,7 @@ class City extends React.Component {
   }
 
   componentDidMount() {
-    axios.get("http://ipinfo.io")
+    axios.get("https://ipinfo.io")
       .then(response => {
       this.setState({
         city: response.data.city,
@@ -60,7 +60,7 @@ class Temp extends React.Component {
   }
 
 componentDidMount() {
-  let reqUri = "http://api.openweathermap.org/data/2.5/weather?q="
+  let reqUri = "https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/weather?q="
             + this.props.cityProp
             + ","
             + this.props.countryProp

@@ -1,3 +1,7 @@
-src/frontend/06_twitchtv_api/node_modules/
 src/frontend/04_local_weather/node_modules/
 src/frontend/05_wikipedia_viewer/node_modules/
+src/frontend/06_twitchtv_api/node_modules/
+src/frontend/07_calculator/node_modules/
+src/frontend/08_pomodoro/node_modules/
+src/frontend/09_tictactoe/node_modules/
+src/frontend/10_simongame/node_modules/

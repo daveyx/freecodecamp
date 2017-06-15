@@ -3,7 +3,7 @@
 import React, {Component} from 'react';
 import {Row, Col, Modal, Button} from 'react-bootstrap';
 import PlayGround from './playGround';
-import PlayerSelection from './playerSelection'
+import PlayerSelection from './playerSelection';
 
 const initialGameState = {
   sqr1: "",
@@ -15,7 +15,7 @@ const initialGameState = {
   sqr7: "",
   sqr8: "",
   sqr9: ""
-}
+};
 
 let winnerMessage = "";
 

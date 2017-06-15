@@ -2,7 +2,7 @@
 
 import React, {Component} from 'react';
 import {Row, Col} from 'react-bootstrap';
-import Field from './field'
+import Field from './field';
 
 export default class PlayGround extends Component {
   constructor(props) {

@@ -3,7 +3,7 @@
 import React, {Component} from 'react';
 import {Grid, Row, Col} from 'react-bootstrap';
 import '../../css/styles.css';
-import TicTacToe from './tictactoe'
+import TicTacToe from './tictactoe';
 
 export default class App extends Component {
   constructor(props) {

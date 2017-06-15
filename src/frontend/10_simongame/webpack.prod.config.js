@@ -20,20 +20,20 @@ module.exports = {
         exclude: /node_modules/
       }, {
         test: /\.css/,
-        loader: ExtractTextPlugin.extract("css-loader")
+        loader: ExtractTextPlugin.extract('css-loader')
       }
     ]
   },
   plugins: [
     new webpack.optimize.OccurrenceOrderPlugin(),
-    new ExtractTextPlugin("css/styles.css"),
+    new ExtractTextPlugin('css/styles.css'),
     new webpack.DefinePlugin({ // <-- key to reducing React's size
       'process.env': {
         'NODE_ENV': JSON.stringify('production')
       }
     }),
     new webpack.optimize.UglifyJsPlugin(), //minify everything
-    new webpack.optimize.AggressiveMergingPlugin(),//Merge chunks
+    new webpack.optimize.AggressiveMergingPlugin(), //Merge chunks
     new HtmlWebpackPlugin({
         template: 'dev/index.html'
     })

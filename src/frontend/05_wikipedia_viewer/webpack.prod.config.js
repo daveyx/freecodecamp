@@ -10,17 +10,9 @@ var config = {
 entry: './src/client/app/index.jsx',
   output: {
     path: BUILD_DIR,
-    filename: 'js/bundle.[hash].js'
+    filename: 'js/bundle.[hash].js',
+    publicPath: '/freecodecamp/frontend/05_wikipedia_viewer'
   },
-  plugins: [
-    new webpack.DefinePlugin({ // <-- key to reducing React's size
-      'process.env': {
-        'NODE_ENV': JSON.stringify('production')
-      }
-    }),
-    new webpack.optimize.UglifyJsPlugin(), //minify everything
-    new webpack.optimize.AggressiveMergingPlugin()//Merge chunks
-  ],
   module: {
     loaders: [
       {
@@ -35,6 +27,13 @@ entry: './src/client/app/index.jsx',
   },
   plugins: [
     new webpack.optimize.OccurrenceOrderPlugin(),
+    new webpack.DefinePlugin({ // <-- key to reducing React's size
+      'process.env': {
+        'NODE_ENV': JSON.stringify('production')
+      }
+    }),
+    new webpack.optimize.UglifyJsPlugin(), //minify everything
+    new webpack.optimize.AggressiveMergingPlugin()//Merge chunks
     new ExtractTextPlugin("css/styles.css"),
     new HtmlWebpackPlugin({
         template: 'src/client/index.html'

@@ -1,3 +1,11 @@
+@import url(https://fonts.googleapis.com/css?family=Press+Start+2P|Righteous);
+
+body {
+ font-family: 'Righteous', cursive;
+ padding: 0;
+ margin: 0;
+}
+
 h1, h2, p {
     text-align: center;
 }

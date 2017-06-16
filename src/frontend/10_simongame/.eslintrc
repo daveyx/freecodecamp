@@ -28,6 +28,7 @@
     "node": true
   },
   "globals": {
+    "Promise",
     "React": true
-  }
+  },
 }

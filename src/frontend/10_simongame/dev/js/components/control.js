@@ -6,7 +6,7 @@ import {Button, Checkbox} from 'react-bootstrap';
 
 export default class Control extends Component {
   constructor(props) {
-    super();
+    super(props);
     this.state = {
     };
   }

@@ -7,7 +7,7 @@ import SimonGame from './simonGame';
 
 export default class App extends Component {
   constructor(props) {
-    super();
+    super(props);
   }
 
   render() {

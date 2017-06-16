@@ -1,7 +1,7 @@
 'use strict';
 
 import React, {Component} from 'react';
-import ReactDOM from "react-dom";
+import ReactDOM from 'react-dom';
 import {Row, Col} from 'react-bootstrap';
 import '../../css/styles.css';
 import Control from './control';
@@ -21,8 +21,8 @@ export default class SimonGame extends Component {
       moves: [],
       userMoves: [],
       showModal: false,
-      modalTitle: "",
-      modalMessage: ""
+      modalTitle: '',
+      modalMessage: ''
     };
     this.toggleStrictMode = this.toggleStrictMode.bind(this);
     this.startGame = this.startGame.bind(this);
@@ -45,12 +45,12 @@ export default class SimonGame extends Component {
     }, async () => {
       for (var i = 0; i < this.state.moves.length; i++) {
         const pad = this.state.moves[i];
-         this.refs["pad" + pad].play();
+         this.refs['pad' + pad].play();
          await sleep(800);
       }
       this.setState({
         computerRunning: false
-      })
+      });
     });
   }
 
@@ -72,8 +72,8 @@ export default class SimonGame extends Component {
         if (this.state.moves.length === this.state.userMoves.length) {
           if (this.state.moves.length === movesToWin) {
             // user won
-            let modalMessage = "Your brain has an incredible capacity.";
-            let modalTitle = "You won the game!";
+            let modalMessage = 'Your brain has an incredible capacity.';
+            let modalTitle = 'You won the game!';
             this.setState({
               showModal: true,
               modalTitle: modalTitle,
@@ -91,12 +91,12 @@ export default class SimonGame extends Component {
       );
     } else {
       // user failed
-      let modalMessage = "";
-      let modalTitle = "You failed!";
+      let modalMessage = '';
+      let modalTitle = 'You failed!';
       if (this.state.strictMode) {
-        modalMessage = "Strict mode enabled, game finished!"
+        modalMessage = 'Strict mode enabled, game finished!';
       } else {
-        modalMessage = "Strict mode disabled, you can try again!"
+        modalMessage = 'Strict mode disabled, you can try again!';
       }
       this.setState({
         showModal: true,

@@ -21,7 +21,7 @@ export default class Control extends Component {
           Strict
         </Checkbox>
         <Button onClick={this.props.gameRunning ? this.props.restartGame : this.props.startGame}>
-          {this.props.gameRunning ? "Restart" : "Start"}
+          {this.props.gameRunning ? 'Restart' : 'Start'}
         </Button>
         {this.props.gameRunning === true ? <Button onClick={this.props.stopGame}>Stop</Button> : null}
       </div>

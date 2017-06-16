@@ -3,7 +3,7 @@
 import React, {Component} from 'react';
 import {Grid, Row, Col} from 'react-bootstrap';
 import '../../css/styles.css';
-import SimonGame from './simonGame'
+import SimonGame from './simonGame';
 
 export default class App extends Component {
   constructor(props) {

@@ -1,7 +1,6 @@
 'use strict';
 
 import React, {Component} from 'react';
-import ReactDOM from 'react-dom';
 import {Row, Col} from 'react-bootstrap';
 import '../../css/styles.css';
 import Control from './control';
@@ -13,7 +12,7 @@ const movesToWin = 20;
 
 export default class SimonGame extends Component {
   constructor(props) {
-    super();
+    super(props);
     this.state = {
       strictMode: false,
       gameRunning: false,

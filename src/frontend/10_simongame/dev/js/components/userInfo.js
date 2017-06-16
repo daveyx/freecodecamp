@@ -6,7 +6,7 @@ import {Modal, Button} from 'react-bootstrap';
 
 export default class UserInfo extends Component {
   constructor(props) {
-    super();
+    super(props);
     this.state = {
       showModal: false
     };

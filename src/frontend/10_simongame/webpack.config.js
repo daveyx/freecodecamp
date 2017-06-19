@@ -26,13 +26,13 @@ module.exports = {
         exclude: /node_modules/
       }, {
         test: /\.css/,
-        loader: ExtractTextPlugin.extract("css-loader")
+        loader: ExtractTextPlugin.extract('css-loader')
       }
     ]
   },
   plugins: [
     new webpack.optimize.OccurrenceOrderPlugin(),
-    new ExtractTextPlugin("css/styles.css"),
+    new ExtractTextPlugin('css/styles.css'),
     new HtmlWebpackPlugin({
         template: 'dev/index.html'
     })

@@ -1,11 +1,11 @@
-html {
+@import url(https://fonts.googleapis.com/css?family=Press+Start+2P|Righteous);html {
   box-sizing: border-box;
   background-color: #46b8da;
   padding-top: 20px;
   padding-bottom: 20px;
 }
 body {
-  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-family: 'Righteous', cursive;
   max-width: 30em;
   padding: 2em;
   margin: 0 auto;

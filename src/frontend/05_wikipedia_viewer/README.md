@@ -10,10 +10,7 @@
 https://www.freecodecamp.com/challenges/build-a-wikipedia-viewer
 
 ### live demo
-http://daveyx.ga/wikipedia-viewer
-
-### view at codepen
-http://codepen.io/daveyx/full/jBwJmR/
+https://daveyx.github.io/freecodecamp/frontend/05_wikipedia_viewer/
 
 ### install
 1. git clone https://github.com/daveyx/freecodecamp.git

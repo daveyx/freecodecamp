@@ -5,7 +5,6 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 var BUILD_DIR = path.resolve(__dirname, '../../../public/frontend/05_wikipedia_viewer');
 
-
 var config = {
 entry: './src/client/app/index.jsx',
   output: {

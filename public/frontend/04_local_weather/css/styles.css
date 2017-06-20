@@ -1,11 +1,11 @@
-html {
+@import url(https://fonts.googleapis.com/css?family=Press+Start+2P|Righteous);html {
   box-sizing: border-box;
   background-color: #46b8da;
   padding-top: 20px;
   padding-bottom: 20px;
 }
 body {
-  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-family: 'Righteous', cursive;
   max-width: 30em;
   padding: 2em;
   margin: 0 auto;
@@ -26,21 +26,24 @@ div {
 }
 .city {
   font-size: 2.5em;
+  margin-top: 20px;
 }
 .temp {
   font-size: 4.5em;
+  margin-bottom: 20px;
 }
 .icon {
   font-size: 7em;
 }
 button {
-  color: #ccc;
+  color: #000;
   background-color: #fff;
   display: inline-block;
   padding: 6px 12px;
   cursor: pointer;
   border: 1px solid #ccc;
   border-radius: 4px;
+  margin-top: 20px;
 }
 footer {
   margin-top: 50px;

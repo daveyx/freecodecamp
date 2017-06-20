@@ -10,11 +10,11 @@
 https://www.freecodecamp.com/challenges/build-a-simon-game
 
 ### live demo
-https://daveyx.github.io/fcc-simon
+https://daveyx.github.io/freecodecamp/frontend/10_simongame/
 
 ### install
-1. git clone https://github.com/daveyx/fcc-simon
-2. cd fcc-simon
+1. git clone https://github.com/daveyx/freecodecamp.git
+2. cd freecodecamp/src/frontend/10_simongame
 3. npm install
 4. npm start
 5. call http://localhost:3000 in your browser

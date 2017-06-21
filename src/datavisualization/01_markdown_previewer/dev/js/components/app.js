@@ -31,10 +31,12 @@ export default class App extends Component {
         <main>
           <Grid>
             <Row>
-              <Col xs={12}>
+              <Col xs={12} md={6}>
                 <section>
                   <Input data={this.state.data} />
                 </section>
+              </Col>
+              <Col xs={12} md={6}>
                 <section>
                   <Output data={this.state.data} />
                 </section>

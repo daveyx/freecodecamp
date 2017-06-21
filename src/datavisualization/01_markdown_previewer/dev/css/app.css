@@ -1,0 +1,15 @@
+html {
+  box-sizing: border-box;
+  text-align: center;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+header {
+  padding-top: 10px;
+}
+h1 {
+  font-size: 1.8em;
+  margin-top: 0.3em;
+  margin-bottom: 0;
+}

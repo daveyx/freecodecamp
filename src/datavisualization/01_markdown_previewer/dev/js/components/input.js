@@ -25,7 +25,7 @@ export default class Input extends Component {
         <FormControl
           ref="inputValue"
           componentClass="textarea"
-          placeholder="textarea"
+          rows="20"
           value={this.state.data}
           onKeyUp={this.onChange}
           onChange={this.onChange}

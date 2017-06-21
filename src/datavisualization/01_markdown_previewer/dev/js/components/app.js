@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {Grid, Row, Col} from 'react-bootstrap';
 import Input from './input';
 import Output from './output';
 import '../../css/app.css';
@@ -15,19 +16,31 @@ export default class App extends Component {
 
   render() {
     return(
-      <div className="wrapper">
+      <div>
         <header>
-          <small>Free Code Camp</small>
-          <h1>Markdown Previewer</h1>
-          <div>by <a href="https://www.daveyx.ga" target="_blank">daveyx</a></div>
+          <Grid>
+            <Row>
+              <Col xs={12}>
+                <small>Free Code Camp</small>
+                <h1>Markdown Previewer</h1>
+                <div>by <a href="https://www.daveyx.ga" target="_blank">daveyx</a></div>
+              </Col>
+            </Row>
+          </Grid>
         </header>
         <main>
-          <section>
-            <Input data={this.state.data} />
-          </section>
-          <section>
-            <Output data={this.state.data} />
-          </section>
+          <Grid>
+            <Row>
+              <Col xs={12}>
+                <section>
+                  <Input data={this.state.data} />
+                </section>
+                <section>
+                  <Output data={this.state.data} />
+                </section>
+              </Col>
+            </Row>
+          </Grid>
         </main>
       </div>
     );

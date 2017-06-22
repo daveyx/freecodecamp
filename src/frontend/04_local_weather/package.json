@@ -19,6 +19,7 @@
   "homepage": "https://github.com/daveyx/fcc-weather-app#readme",
   "dependencies": {
     "axios": "^0.15.3",
+    "babel-polyfill": "^6.23.0",
     "react": "^15.4.2",
     "react-dom": "^15.4.2"
   },

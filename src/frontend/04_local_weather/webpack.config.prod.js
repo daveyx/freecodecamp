@@ -7,7 +7,7 @@ var BUILD_DIR = path.resolve(__dirname, '../../../public/frontend/04_local_weath
 var APP_DIR = path.resolve(__dirname, 'src/client/app');
 
 var config = {
-  entry: APP_DIR + '/index.jsx',
+  entry: ['babel-polyfill', APP_DIR + '/index.jsx'],
   output: {
     path: BUILD_DIR,
     filename: 'js/bundle.[hash].js',

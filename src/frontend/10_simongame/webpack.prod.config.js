@@ -6,7 +6,7 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 var BUILD_DIR = path.resolve(__dirname, '../../../public/frontend/10_simongame');
 
 module.exports = {
-  entry: './dev/js/index.js',
+  entry: ['babel-polyfill', './dev/js/index.js'],
   output: {
     path: BUILD_DIR,
     filename: 'js/bundle.[hash].js',
